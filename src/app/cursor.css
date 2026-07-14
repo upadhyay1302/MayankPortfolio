@@ -1,0 +1,45 @@
+.site-cursor-plus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  transform: translate3d(-240px, -240px, 0); /* parked off-screen until first move */
+  transition: opacity 0.16s ease;
+  will-change: transform, opacity;
+}
+.site-cursor-plus::before,
+.site-cursor-plus::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgba(55, 46, 40, 0.92); /* swap to match your text/accent color */
+  transform: translate(-50%, -50%);
+}
+.site-cursor-plus::before { width: 24px; height: 1.5px; }
+.site-cursor-plus::after { width: 1.5px; height: 24px; }
+body.custom-cursor-on.custom-cursor-visible .site-cursor-plus { opacity: 1; }
+body.custom-cursor-on, body.custom-cursor-on * { cursor: none !important; }
+
+.cursor-label {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--color-bg);
+  background: var(--color-text);
+  padding: 4px 10px;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  transform: translate3d(-240px, -240px, 0);
+  will-change: transform, opacity;
+}
+.cursor-label.visible { opacity: 1; }
