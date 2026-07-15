@@ -15,13 +15,13 @@ export interface ExperienceItem {
   modal: ExperienceModal;
 }
 
-export interface ResearchItem {
-  role: string;
-  company: string;
-  date: string;
-  image: string;
-  modal: ExperienceModal;
-}
+// export interface ResearchItem {
+//   role: string;
+//   company: string;
+//   date: string;
+//   image: string;
+//   modal: ExperienceModal;
+// }
 
 export interface ProjectItem {
   title: string;
@@ -57,9 +57,9 @@ export const experience: ExperienceItem[] = [
 
 ];
 
-export const research: ResearchItem[] = [
+// export const research: ResearchItem[] = [
 
-];
+// ];
 
 export const projects: ProjectItem[] = [
 

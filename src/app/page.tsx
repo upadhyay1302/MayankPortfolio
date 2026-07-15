@@ -15,7 +15,7 @@ import { siteConfig } from "@/data/portfolio";
 
 const siteAnnouncement = {
   href: siteConfig.resumePdf,
-  text: "currently looking for summer 2027 positions:",
+  text: "currently looking for winter 2027 positions:",
   linkLabel: "check my résumé",
 };
 
@@ -257,7 +257,7 @@ export default function Home() {
         <Hero greeting={greeting} />
         <About onProgress={handleProgress("about")} revealed={!!revealed.about} />
         <Experience onProgress={handleProgress("experience")} revealed={!!revealed.experience} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} />
-        <Research onProgress={handleProgress("research")} revealed={!!revealed.research} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} />
+        {/* <Research onProgress={handleProgress("research")} revealed={!!revealed.research} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} /> */}
         <Projects onProgress={handleProgress("projects")} revealed={!!revealed.projects} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} />
       </main>
 
