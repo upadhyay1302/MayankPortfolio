@@ -44,7 +44,8 @@ export const siteConfig = {
   resumePdf: "/resume.pdf",
   about: {
     paragraphs: [
-     
+      "My journey has taken me across different places, cultures, and experiences that have shaped who I am today. I was born in Rajasthan, India, and later moved to the United Arab Emirates, where I spent my childhood and completed my schooling. Growing up in different environments taught me the value of curiosity, adaptability, and always being open to learning from the world around me.",
+      "<br /> That journey eventually brought me to Canada, where I am currently completing my undergraduate degree in Software Engineering at University Of Waterloo. Throughout my time here, I have discovered a deep passion for research, innovation, and exploring how technology can be used to understand and solve meaningful problems.",
     ],
     quote: { label: "April 2026", text: "Keep shipping. Keep learning." },
     polaroidSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
