@@ -54,7 +54,32 @@ export const siteConfig = {
 };
 
 export const experience: ExperienceItem[] = [
-
+  {
+    role: "Full Stack Developer Co-op",
+    company: "Borrowell",
+    date: "May 2026 — August 2026",
+    image: "",
+    modal: {
+      title: "Borrowell",
+      subtitle: "Full Stack Developer Co-op : Marketplace Team",
+      image: "/222Jarvis.jpeg",
+      body: "",
+      links: [],
+    },
+  },
+  {
+    role: "Software Developer Co-op",
+    company: "AutoTrader",
+    date: "September 2025 — December 2025",
+    image: "",
+    modal: {
+      title: "AutoTrader",
+      subtitle: "Software Developer Co-op",
+      image: "/5700Yonge.jpeg",
+      body: "",
+      links: [],
+    },
+  },
 ];
 
 // export const research: ResearchItem[] = [
