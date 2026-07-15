@@ -80,6 +80,32 @@ export const experience: ExperienceItem[] = [
       links: [],
     },
   },
+  {
+    role: "Software Developer Co-op",
+    company: "AutoTrader",
+    date: "January 2025 — April 2025",
+    image: "",
+    modal: {
+      title: "AutoTrader",
+      subtitle: "Software Developer Co-op",
+      image: "/5700Yonge.jpeg",
+      body: "",
+      links: [],
+    },
+  },
+  {
+    role: "Systems Engineer Co-op",
+    company: "VCNA",
+    date: "May 2024 — August 2025",
+    image: "",
+    modal: {
+      title: "Systems Engineer Co-op",
+      subtitle: "VCNA",
+      image: "/5700Yonge.jpeg",
+      body: "",
+      links: [],
+    },
+  }
 ];
 
 // export const research: ResearchItem[] = [
