@@ -6,7 +6,6 @@ import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
-import Research from "@/components/sections/Research";
 import Projects from "@/components/sections/Projects";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { useModal } from "@/hooks/useModal";
@@ -34,10 +33,30 @@ function getGreeting(): string {
   return pick(["Good evening,", "Evening. Let's get into it,", "Hope today was good,"]);
 }
 
+const THEME_STORAGE_KEY = "theme";
+
 export default function Home() {
   const [greeting, setGreeting] = useState("");
   const [revealed, setRevealed] = useState<Record<string, boolean>>({});
   const [showAnnouncement, setShowAnnouncement] = useState(true);
+  const [nightMode, setNightMode] = useState(true);
+
+  // Read stored preference on mount (defaults to dark if none saved).
+  useEffect(() => {
+    const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+    if (stored === "light") setNightMode(false);
+    if (stored === "dark") setNightMode(true);
+  }, []);
+
+  // Apply the theme to <body> and persist it.
+  useEffect(() => {
+    document.body.classList.toggle("night-mode", nightMode);
+    window.localStorage.setItem(THEME_STORAGE_KEY, nightMode ? "dark" : "light");
+  }, [nightMode]);
+
+  const toggleNightMode = useCallback(() => {
+    setNightMode((prev) => !prev);
+  }, []);
 
   const { activeSection, showBackToTop, progressFillRef, getMaxScroll } = useScrollProgress();
   const { activeModal, modalSection, openModal, closeModal, drawerCloseRef } = useModal();
@@ -217,6 +236,8 @@ export default function Home() {
         activeSection={activeSection}
         progressFillRef={progressFillRef}
         scrollTo={scrollTo}
+        nightMode={nightMode}
+        onToggleNightMode={toggleNightMode}
       />
 
       <div
@@ -254,14 +275,14 @@ export default function Home() {
       </div>
 
       <main id="top">
-        <Hero greeting={greeting} />
+        <Hero greeting={greeting} nightMode={nightMode} />
         <About onProgress={handleProgress("about")} revealed={!!revealed.about} />
-        <Experience onProgress={handleProgress("experience")} revealed={!!revealed.experience} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} />
+        <Experience onProgress={handleProgress("experience")} revealed={!!revealed.experience} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} nightMode={nightMode} />
         {/* <Research onProgress={handleProgress("research")} revealed={!!revealed.research} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} /> */}
-        <Projects onProgress={handleProgress("projects")} revealed={!!revealed.projects} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} />
+        <Projects onProgress={handleProgress("projects")} revealed={!!revealed.projects} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} nightMode={nightMode} />
       </main>
 
-      <Footer />
+      <Footer nightMode={nightMode} />
 
       <Drawer
         activeModal={activeModal}

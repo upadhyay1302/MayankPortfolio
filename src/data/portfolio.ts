@@ -113,5 +113,19 @@ export const experience: ExperienceItem[] = [
 // ];
 
 export const projects: ProjectItem[] = [
-
+  {
+    title: "HTTP Server (C++)",
+    stack: "C++ · Sockets · Epoll · Thread Pool · Benchmarking",
+    award: "Systems Programming",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+    link: "https://github.com/haaaarsh4/http_server",
+    linkLabel: "View Code",
+    modal: {
+      title: "HTTP Server (C++)",
+      subtitle: "Systems Programming",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+      body: "A custom HTTP server written in C++ using raw sockets, epoll for event-driven I/O, and a thread pool for concurrency, with benchmarking tools to evaluate throughput and latency.",
+      links: [{ label: "View Code", url: "https://github.com/haaaarsh4/http_server" }],
+    },
+  }
 ];

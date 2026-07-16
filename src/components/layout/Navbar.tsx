@@ -6,9 +6,11 @@ interface Props {
   activeSection: string;
   progressFillRef: React.RefObject<HTMLSpanElement | null>;
   scrollTo: (id: string) => void;
+  nightMode?: boolean;
+  onToggleNightMode?: () => void;
 }
 
-export default function Navbar({ activeSection, progressFillRef, scrollTo }: Props) {
+export default function Navbar({ activeSection, progressFillRef, scrollTo, nightMode = false, onToggleNightMode }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleScrollTo = (id: string) => {
@@ -61,6 +63,18 @@ export default function Navbar({ activeSection, progressFillRef, scrollTo }: Pro
               )
             )}
           </div>
+
+          {onToggleNightMode && (
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={onToggleNightMode}
+              aria-label={nightMode ? "Switch to light mode" : "Switch to dark mode"}
+              aria-pressed={nightMode}
+            >
+              {nightMode ? "Light" : "Dark"}
+            </button>
+          )}
 
           <button
             className={`hamburger${menuOpen ? " open" : ""}`}
