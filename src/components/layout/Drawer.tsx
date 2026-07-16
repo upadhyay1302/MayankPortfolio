@@ -46,13 +46,15 @@ export default function Drawer({
 
         {activeModal && (
           <div className="drawer-body">
-            <img
-              src={activeModal.image}
-              alt=""
-              className={`modal-image ${drawerImageReady ? "ready" : "pending"}`}
-              loading="eager"
-              decoding="async"
-            />
+            {activeModal.image && (
+              <img
+                src={activeModal.image}
+                alt=""
+                className={`modal-image ${drawerImageReady ? "ready" : "pending"}`}
+                loading="eager"
+                decoding="async"
+              />
+            )}
             <h2 className="modal-title" id="drawer-title">
               {activeModal.title}
             </h2>

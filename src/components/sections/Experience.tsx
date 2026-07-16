@@ -55,13 +55,15 @@ export default function Experience({ onProgress, revealed, nightMode = false, on
                     onMouseEnter={() => showCursor?.("View details")}
                     onMouseLeave={() => hideCursor?.()}
                   >
-                    <img
-                      src={exp.image}
-                      alt=""
-                      className="experience-card-bg"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    {exp.image && (
+                      <img
+                        src={exp.image}
+                        alt=""
+                        className="experience-card-bg"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    )}
                     <div className="experience-card-content">
                       <div className="experience-left">
                         <span className="experience-role">{exp.role}</span>
