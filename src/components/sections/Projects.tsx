@@ -55,13 +55,15 @@ export default function Projects({ onProgress, revealed, nightMode = false, onCa
                       onMouseEnter={() => showCursor?.("View project")}
                       onMouseLeave={() => hideCursor?.()}
                     >
-                      <img
-                        src={proj.image}
-                        alt=""
-                        className="project-card-bg"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      {proj.image && (
+                        <img
+                          src={proj.image}
+                          alt=""
+                          className="project-card-bg"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      )}
                       <div className="project-card-content">
                         <span className="project-tag">{proj.award}</span>
                         <h3 className="project-name">{proj.title}</h3>
