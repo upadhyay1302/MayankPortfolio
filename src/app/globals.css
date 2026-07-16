@@ -1013,7 +1013,7 @@ body.night-mode .theme-toggle:focus-visible {
 /* ---- Projects ---- */
 .project-grid-wrap { position: relative; }
 .projects-dino {
-  position: absolute; left: -0.65rem; bottom: -12.2rem;
+  position: absolute; left: -0.65rem; top: 100%; margin-top: -2.4rem;
   width: clamp(360px, 42vw, 650px); opacity: 0; pointer-events: none; z-index: 0;
   transform: translateY(12px) rotate(2deg) scale(0.95);
 }
@@ -1029,7 +1029,7 @@ body.night-mode .theme-toggle:focus-visible {
 .project-route::after { content: ""; position: absolute; right: -1px; top: -2px; width: 4px; height: 4px; border-radius: 50%; background: rgba(163, 91, 60, 0.45); }
 .route-a { width: 32%; left: 8%; top: 46%; transform: rotate(-12deg); }
 .route-b { width: 28%; right: 9%; top: 58%; transform: rotate(14deg); }
-.project-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1.5px dashed var(--color-border); }
+.project-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1.5px dashed var(--color-border); position: relative; z-index: 1; }
 .project-card {
   aspect-ratio: 1; position: relative; overflow: hidden; cursor: pointer;
   background: rgba(255,255,255,0.4); border-right: 1.5px dashed var(--color-border);
@@ -1614,7 +1614,7 @@ body.night-mode *:focus-visible { outline-color: #b98cf7; }
   .section-experience { margin-top: 2.8rem; }
   .experience-lily { width: clamp(140px, 36vw, 220px); top: -2.1rem; right: 0.15rem; }
   .project-grid { grid-template-columns: repeat(2, 1fr); }
-  .projects-dino { left: -0.1rem; bottom: -8.1rem; width: clamp(300px, 68vw, 500px); }
+  .projects-dino { left: -0.1rem; top: 100%; margin-top: -1.6rem; width: clamp(300px, 68vw, 500px); }
   .project-route-lines { opacity: 0.32; }
   .route-a { width: 40%; left: 6%; top: 38%; transform: rotate(-10deg); }
   .route-b { width: 34%; right: 8%; top: 64%; transform: rotate(11deg); }
