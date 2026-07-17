@@ -1,6 +1,5 @@
 "use client";
 import ScrollRevealText from "@/components/ui/ScrollRevealText";
-import DitheredImage from "@/components/ui/DitheredImage";
 import { experience } from "@/data/portfolio";
 import type { ExperienceModal } from "@/data/portfolio";
 
@@ -19,15 +18,6 @@ export default function Experience({ onProgress, revealed, nightMode = false, on
       <div className="sticky-panel">
         <div className="section-inner">
           <section aria-label="Work experience" className="experience-section-wrap">
-            <div className={`experience-lily${revealed ? " revealed" : ""}`} aria-hidden="true">
-              <DitheredImage
-                src="/lily.png"
-                className="experience-lily-canvas"
-                nightMode={nightMode}
-                maxSize={720}
-              />
-            </div>
-
             <ScrollRevealText
               text="Experience"
               className="section-title"

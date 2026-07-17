@@ -28,7 +28,7 @@ export default function Hero({ greeting, nightMode = false }: Props) {
             aria-label="Introduction"
             style={{ position: "relative" }}
           >
-            <FloatingBird />
+            <FloatingBird nightMode={nightMode} />
 
             <div
               className="hero-layout"

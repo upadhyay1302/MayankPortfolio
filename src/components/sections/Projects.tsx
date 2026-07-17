@@ -1,6 +1,5 @@
 "use client";
 import ScrollRevealText from "@/components/ui/ScrollRevealText";
-import DitheredImage from "@/components/ui/DitheredImage";
 import { projects } from "@/data/portfolio";
 import type { ExperienceModal } from "@/data/portfolio";
 
@@ -29,14 +28,6 @@ export default function Projects({ onProgress, revealed, nightMode = false, onCa
 
             <div className={`section-content${revealed ? " revealed" : ""}`}>
               <div className="project-grid-wrap">
-                <div className={`projects-dino${revealed ? " revealed" : ""}`} aria-hidden="true">
-                  <DitheredImage
-                    src="/dino.png"
-                    className="projects-dino-canvas"
-                    nightMode={nightMode}
-                    maxSize={760}
-                  />
-                </div>
                 <div className="project-grid" role="list">
                   {projects.map((proj, i) => (
                     <div

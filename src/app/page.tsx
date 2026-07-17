@@ -278,6 +278,7 @@ export default function Home() {
         <Hero greeting={greeting} nightMode={nightMode} />
         <About onProgress={handleProgress("about")} revealed={!!revealed.about} />
         <Experience onProgress={handleProgress("experience")} revealed={!!revealed.experience} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} nightMode={nightMode} />
+
         {/* <Research onProgress={handleProgress("research")} revealed={!!revealed.research} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} /> */}
         <Projects onProgress={handleProgress("projects")} revealed={!!revealed.projects} onCardClick={handleCardClick} showCursor={showCursor} hideCursor={hideCursor} nightMode={nightMode} />
       </main>

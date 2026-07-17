@@ -62,7 +62,7 @@ export const experience: ExperienceItem[] = [
     modal: {
       title: "Borrowell",
       subtitle: "Full Stack Developer Co-op : Marketplace Team",
-      image: "/222Jarvis.jpeg",
+      image: "/BorrowellLogo.jpg",
       body: "",
       links: [],
     },
@@ -75,7 +75,7 @@ export const experience: ExperienceItem[] = [
     modal: {
       title: "AutoTrader",
       subtitle: "Software Developer Co-op",
-      image: "/5700Yonge.jpeg",
+      image: "/autoTraderLogo2.png",
       body: "",
       links: [],
     },
@@ -88,7 +88,7 @@ export const experience: ExperienceItem[] = [
     modal: {
       title: "AutoTrader",
       subtitle: "Software Developer Co-op",
-      image: "/5700Yonge.jpeg",
+      image: "autoTraderLogo2.png",
       body: "",
       links: [],
     },
@@ -101,7 +101,7 @@ export const experience: ExperienceItem[] = [
     modal: {
       title: "Systems Engineer Co-op",
       subtitle: "VCNA",
-      image: "/5700Yonge.jpeg",
+      image: "/VCNA.jpeg",
       body: "",
       links: [],
     },
@@ -117,13 +117,13 @@ export const projects: ProjectItem[] = [
     title: "HTTP Server (C++)",
     stack: "C++ · Sockets · Epoll · Thread Pool · Benchmarking",
     award: "Systems Programming",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+    image: "/server.jpeg",
     link: "https://github.com/haaaarsh4/http_server",
     linkLabel: "View Code",
     modal: {
       title: "HTTP Server (C++)",
       subtitle: "Systems Programming",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+      image: "/server2.jpeg",
       body: "A custom HTTP server written in C++ using raw sockets, epoll for event-driven I/O, and a thread pool for concurrency, with benchmarking tools to evaluate throughput and latency.",
       links: [{ label: "View Code", url: "https://github.com/haaaarsh4/http_server" }],
     },

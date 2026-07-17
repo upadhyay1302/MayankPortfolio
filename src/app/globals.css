@@ -497,23 +497,6 @@ html { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
 
 .section-experience { margin-top: 4.2rem; }
 .experience-section-wrap { position: relative; }
-.experience-lily {
-  position: absolute; top: -3.1rem; right: 0;
-  width: clamp(172px, 22vw, 308px);
-  opacity: 0; pointer-events: none; z-index: 0;
-  transform: translateY(14px) rotate(-2deg) scale(0.94);
-}
-.experience-lily-canvas {
-  width: 100%; height: auto; display: block;
-  image-rendering: pixelated; mix-blend-mode: multiply;
-}
-.experience-lily.revealed {
-  animation: lilyReveal 0.85s var(--ease-out-expo) 0.28s forwards;
-}
-@keyframes lilyReveal {
-  from { opacity: 0; transform: translateY(14px) rotate(-2deg) scale(0.94); }
-  to { opacity: 0.38; transform: translateY(0) rotate(0deg) scale(1); }
-}
 .experience-section-wrap .section-title,
 .experience-section-wrap .section-content {
   position: relative; z-index: 1;
@@ -1012,17 +995,6 @@ body.night-mode .theme-toggle:focus-visible {
 
 /* ---- Projects ---- */
 .project-grid-wrap { position: relative; }
-.projects-dino {
-  position: absolute; left: -0.65rem; top: 100%; margin-top: -2.4rem;
-  width: clamp(360px, 42vw, 650px); opacity: 0; pointer-events: none; z-index: 0;
-  transform: translateY(12px) rotate(2deg) scale(0.95);
-}
-.projects-dino-canvas { width: 100%; height: auto; display: block; image-rendering: auto; mix-blend-mode: multiply; filter: contrast(1.16) brightness(0.82); }
-.projects-dino.revealed { animation: dinoReveal 0.85s var(--ease-out-expo) 0.18s forwards; }
-@keyframes dinoReveal {
-  from { opacity: 0; transform: translateY(12px) rotate(2deg) scale(0.95); }
-  to { opacity: 0.36; transform: translateY(0) rotate(0deg) scale(1); }
-}
 .project-route-lines { position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0; transition: opacity 0.7s ease; }
 .project-route-lines.revealed { opacity: 0.45; }
 .project-route { position: absolute; height: 1px; border-top: 1px dashed rgba(163, 91, 60, 0.34); }
@@ -1521,9 +1493,7 @@ body.night-mode .section-about .section-title, body.night-mode .section-experien
 body.night-mode .section-about .body-text, body.night-mode .section-about .about-keyword { color: #f1ecfb; }
 body.night-mode .project-route { border-top-color: rgba(185, 140, 247, 0.36); }
 body.night-mode .project-route::after { background: rgba(185, 140, 247, 0.5); }
-body.night-mode .projects-dino.revealed { opacity: 0.32; }
 body.night-mode .human-note { color: rgba(241, 236, 251, 0.7); border-bottom-color: rgba(196, 181, 226, 0.35); }
-body.night-mode .experience-lily.revealed { opacity: 0.3; }
 body.night-mode .section-footer .footer-text, body.night-mode .section-footer .footer-spotify, body.night-mode .section-footer .footer-link { color: #f1ecfb; }
 body.night-mode .city-skyline { filter: none; opacity: 0.5; mix-blend-mode: normal; }
 body.night-mode .skip-link { background: #f1ecfb; color: #140f1c; }
@@ -1612,9 +1582,7 @@ body.night-mode *:focus-visible { outline-color: #b98cf7; }
   .experience-card { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   .experience-card-content { flex-direction: column; gap: 0.15rem; }
   .section-experience { margin-top: 2.8rem; }
-  .experience-lily { width: clamp(140px, 36vw, 220px); top: -2.1rem; right: 0.15rem; }
   .project-grid { grid-template-columns: repeat(2, 1fr); }
-  .projects-dino { left: -0.1rem; top: 100%; margin-top: -1.6rem; width: clamp(300px, 68vw, 500px); }
   .project-route-lines { opacity: 0.32; }
   .route-a { width: 40%; left: 6%; top: 38%; transform: rotate(-10deg); }
   .route-b { width: 34%; right: 8%; top: 64%; transform: rotate(11deg); }

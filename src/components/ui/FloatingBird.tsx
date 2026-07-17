@@ -1,7 +1,11 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-export default function FloatingBird() {
+interface Props {
+  nightMode?: boolean;
+}
+
+export default function FloatingBird({ nightMode = false }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const imgRef  = useRef<HTMLImageElement>(null);
 
@@ -90,7 +94,9 @@ export default function FloatingBird() {
       const bank  = -(dyPx / spd) * 16;
 
       const depth = 0.88 + 0.12 * Math.sin(t * 0.07 + 0.4);
-      const alpha = 0.50 + 0.16 * Math.sin(t * 0.19 + 1.1);
+      const alpha = nightMode
+        ? 0.72 + 0.18 * Math.sin(t * 0.19 + 1.1)
+        : 0.50 + 0.16 * Math.sin(t * 0.19 + 1.1);
 
       wrapEl.style.left = `${cur.x}px`;
       wrapEl.style.top  = `${cur.y}%`;
@@ -108,7 +114,7 @@ export default function FloatingBird() {
       window.removeEventListener("resize", measure);
       if (ro) ro.disconnect();
     };
-  }, []);
+  }, [nightMode]);
 
   return (
     <div
@@ -137,9 +143,10 @@ export default function FloatingBird() {
           userSelect: "none",
           transformOrigin: "center center",
           willChange: "transform, opacity",
-          mixBlendMode: "multiply",
-          filter:
-            "sepia(0.18) brightness(0.48) saturate(0.30) contrast(1.18)",
+          mixBlendMode: nightMode ? "screen" : "multiply",
+          filter: nightMode
+            ? "brightness(1.55) saturate(0.35) contrast(1.05)"
+            : "sepia(0.18) brightness(0.48) saturate(0.30) contrast(1.18)",
         }}
       />
     </div>
