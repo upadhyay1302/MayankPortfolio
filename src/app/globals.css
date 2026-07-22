@@ -1015,16 +1015,17 @@ body.night-mode .theme-toggle:focus-visible {
 .project-card:nth-child(n+5) { border-bottom: none; }
 .project-card-bg {
   position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover; opacity: 0;
-  transition: opacity 0.22s ease;
+  object-fit: cover; opacity: 0.22;
+  transition: opacity 0.3s ease, transform 0.4s var(--ease-out-expo);
   pointer-events: none;
-  will-change: opacity;
-  transform: translateZ(0);
+  will-change: opacity, transform;
+  transform: translateZ(0) scale(1.02);
   backface-visibility: hidden;
 }
 .project-card:hover .project-card-bg,
 .project-card:focus-visible .project-card-bg {
-  opacity: 0.2;
+  opacity: 0.4;
+  transform: translateZ(0) scale(1.06);
 }
 .project-card-content { position: relative; z-index: 1; }
 .project-name { font-family: var(--font-title); font-size: 18px; font-weight: 500; color: var(--color-text); margin-bottom: 0.15rem; }
