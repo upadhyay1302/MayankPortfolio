@@ -125,7 +125,7 @@ export const projects: ProjectItem[] = [
       subtitle: "",
       image: "/raven.png",
       body: "Raven is a structured logging library built in Go, supporting colored output, JSON formatting, and live progress bars for a cleaner developer experience. It's engineered to be thread-safe across concurrent goroutines, using channels and atomic operations to coordinate writes without contention. Performance was a core focus: filtered log calls run in under 8 nanoseconds with zero memory allocations, verified through benchmarks and Go's race detector.",
-      links: [{ label: "View Code", url: "https://github.com/haaaarsh4/http_server" }],
+      links: [{ label: "View Code", url: "https://github.com/upadhyay1302/raven" }],
     },
   },
   {
@@ -139,8 +139,8 @@ export const projects: ProjectItem[] = [
       title: "Arena",
       subtitle: "",
       image: "/arena.png",
-      body: "Raven is a structured logging library built in Go, supporting colored output, JSON formatting, and live progress bars for a cleaner developer experience. It's engineered to be thread-safe across concurrent goroutines, using channels and atomic operations to coordinate writes without contention. Performance was a core focus: filtered log calls run in under 8 nanoseconds with zero memory allocations, verified through benchmarks and Go's race detector.",
-      links: [{ label: "View Code", url: "https://github.com/haaaarsh4/http_server" }],
+      body: "Arena is a real-time Go game server that hosts head-to-head AI competitions between multiple language models, streamed live through WebSocket rooms. It runs concurrent multi-game engines for both turn-based and simultaneous matches, with each game isolated in its own goroutine loop to keep matches independent and race-free. A custom LLM parser strips reasoning-model 'think' blocks from model outputs, backed by an automated 3x fallback retry loop to handle malformed or incomplete responses. The platform is fronted by a Next.js 15 dashboard that visualizes live match states in real time alongside a dynamic, automatically updating ELO leaderboard.",
+      links: [{ label: "View Code", url: "https://github.com/upadhyay1302/arena" }],
     },
   },
   {
