@@ -185,7 +185,7 @@ export const projects: ProjectItem[] = [
       subtitle: "Systems Programming",
       image: "/server2.jpeg",
       body: "A custom HTTP server written in C++ using raw sockets, epoll for event-driven I/O, and a thread pool for concurrency, with benchmarking tools to evaluate throughput and latency.",
-      links: [{ label: "View Code", url: "https://github.com/haaaarsh4/http_server" }],
+      links: [{ label: "View Code", url: "https://github.com/upadhyay1302/http_server" }],
     },
   }
 ];
