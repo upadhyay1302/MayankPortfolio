@@ -132,7 +132,7 @@ export const projects: ProjectItem[] = [
     title: "Arena",
     stack: "Go",
     award: "",
-    image: "/arena.png",
+    image: "/arena1.png",
     link: "https://github.com/upadhyay1302/arena",
     linkLabel: "View Code",
     modal: {
