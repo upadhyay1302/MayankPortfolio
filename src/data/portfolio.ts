@@ -187,5 +187,20 @@ export const projects: ProjectItem[] = [
       body: "A custom HTTP server written in C++ using raw sockets, epoll for event-driven I/O, and a thread pool for concurrency, with benchmarking tools to evaluate throughput and latency.",
       links: [{ label: "View Code", url: "https://github.com/upadhyay1302/http_server" }],
     },
+  },
+  {
+    title: "Athena",
+    stack: "Python",
+    award: "",
+    image: "/athena.png",
+    link: "https://github.com/upadhyay1302/Athena",
+    linkLabel: "View Code",
+    modal: {
+      title: "Athena",
+      subtitle: "",
+      image: "/athena1.png",
+      body: "Athena is a voice-controlled desktop assistant I built in Python, basically my take on a Jarvis-style helper you can talk to instead of clicking through menus. Say 'wake up' and it starts listening; from there it can open apps, play or pause YouTube videos, search Google or Wikipedia, pull the day's news, check the weather, set alarms, run the math you're too lazy to do yourself, or even send a WhatsApp message, all through voice commands like 'what's the weather in Toronto' or 'set an alarm for 10 AM.' I also added a focus mode that cuts down on distractions and tracks how your focus holds up over a session, plotting it out afterward so you can actually see the pattern instead of just guessing. There's a rock-paper-scissors game in there too, mostly because it was fun to build. Under the hood it's a grab-bag of libraries stitched together, speech recognition for the voice input, automation libraries for controlling apps and the browser, and a handful of APIs for news, weather, and search — with everything routed through a central command handler that figures out what you were asking for and dispatches it to the right function.",
+      links: [{ label: "View Code", url: "https://github.com/upadhyay1302/Athena" }],
+    }
   }
 ];
