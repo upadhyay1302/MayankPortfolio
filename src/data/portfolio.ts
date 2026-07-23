@@ -15,14 +15,6 @@ export interface ExperienceItem {
   modal: ExperienceModal;
 }
 
-// export interface ResearchItem {
-//   role: string;
-//   company: string;
-//   date: string;
-//   image: string;
-//   modal: ExperienceModal;
-// }
-
 export interface ProjectItem {
   title: string;
   stack: string;
