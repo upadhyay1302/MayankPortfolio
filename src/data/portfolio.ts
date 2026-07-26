@@ -94,7 +94,7 @@ export const experience: ExperienceItem[] = [
       title: "Systems Engineer Co-op",
       subtitle: "VCNA",
       image: "/VCNA.jpeg",
-      body: "",
+      body: "Built React.js HMI screens and automated PLC data reporting using Python and SQL, improving reporting accuracy by 80%.",
       links: [],
     },
   }
