@@ -55,7 +55,7 @@ export const experience: ExperienceItem[] = [
       title: "Borrowell",
       subtitle: "Full Stack Developer Co-op : Marketplace Team",
       image: "/BorrowellLogo.jpg",
-      body: "",
+      body: "At Borrowell, I worked on the full-stack credit card tracking hub, built with C# microservices on the backend and React Native on the frontend, which let over 4 million users monitor their real-time credit utilization, track balances, and edit payment schedules right from the app. I also cleaned up a lot of technical debt around database migrations, cut out roughly 16,000 lines of migration code across six product verticals using EF Core and C#. On the mobile side, I migrated legacy credit report screens that were duplicated across three separate repos into a single shared React Native library, which let us do zero-downtime rollouts through Harness instead of coordinating risky releases across repos. I also built out serverless workflows using Azure Functions and Slack webhooks that got rid of silent production sync failures entirely, so issues would actually surface instead of failing quietly. Lastly, I optimized some of the marketplace product endpoints with C# and Redis caching, which cut API response latency by 30% for active users.",
       links: [],
     },
   },
