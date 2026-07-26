@@ -68,7 +68,7 @@ export const experience: ExperienceItem[] = [
       title: "AutoTrader",
       subtitle: "Software Developer Co-op",
       image: "/autoTraderLogo2.png",
-      body: "",
+      body: "During my second term at AutoTrader, I built a full-stack fee scheduler using Angular on the frontend and Hangfire SQL queues on the backend, which took manual billing interventions down to zero across more than 5,000 recurring job executions a month. I also migrated 12 legacy .NET 4.7 REST controllers over to .NET 8, which shaved 35% off p95 API latency on our core production services. Separately, I put together a C# CLI tool that used REST APIs to batch-migrate over 60,000 items from Azure DevOps to Jira, which saved the team more than 200 hours of manual work they would've otherwise spent moving things by hand.",
       links: [],
     },
   },
