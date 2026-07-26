@@ -81,7 +81,7 @@ export const experience: ExperienceItem[] = [
       title: "AutoTrader",
       subtitle: "Software Developer Co-op",
       image: "autoTraderLogo2.png",
-      body: "",
+      body: "At AutoTrader, I spent time modernizing a legacy WCF health check service by breaking it apart into standalone .NET 8 Web APIs and switching to JSON serialization, which cut telemetry latency by 40%. I also automated the NuGet packaging process through Jenkins pipelines, deployments that used to take 45 minutes across 12+ AWS servers dropped down to about 4. On the backend logic side, I refactored a core Rule Engine to use Autofac for dependency injection, which let us version it in a backward-compatible way without breaking anything for existing clients. I also built out a real-time observability dashboard in ASP.NET MVC that pulled together database timeouts and Hangfire job states in one place, so the team could triage incidents a lot faster instead of digging through logs across separate systems.",
       links: [],
     },
   },
