@@ -39,21 +39,6 @@ export default function About({ onProgress, revealed }: Props) {
                     &ldquo;{about.quote.text}&rdquo;
                   </p>
                 </div>
-
-                <div className="polaroid-wrapper" aria-hidden="true">
-                  <div className="polaroid">
-                    <div className="polaroid-image-wrapper">
-                      <img
-                        src={about.polaroidSrc}
-                        alt=""
-                        className="polaroid-image"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                    <p className="polaroid-caption">{about.polaroidCaption}</p>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
